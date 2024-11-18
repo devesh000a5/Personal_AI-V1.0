@@ -1,7 +1,7 @@
 const button = document.querySelector('.btn');
 const inputText = document.querySelector('textarea');
 const output = document.getElementById('output'); // Reference for showing the result
-const downloadLink = document.getElementById('download-link');
+
 
 button.addEventListener('click', async () => {
     const prompt = inputText.value.trim();

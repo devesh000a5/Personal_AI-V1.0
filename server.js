@@ -4,11 +4,11 @@ const cors = require('cors');
 const app = express();
 const port = 3000;
 
-const API_KEY = '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'
+const API_KEY = 'Your_api_key'
 
 // Enable CORS for the specified origin
 app.use(cors({
-    origin: 'http://127.0.0.1:5500' // Allow only this origin
+    origin: 'Port_address_of_index.html' // Allow only this origin
 }));
 
 app.use(express.json());
@@ -28,10 +28,10 @@ app.post('/generate-template', async (req, res) => {
 
     try {
         // Send request to netwok
-        const response = await axios.post('https://api.groq.com/openai/v1/chat/completions', {
-            "model": "llama3-8b-8192", 
+        const response = await axios.post('Enter_Api_Url', {
+            "model": "Enter_Model_name", 
             messages: [
-                // {role: "system", "content": "You are an AI website builder."},
+                // {role: "system", "content": "You are an AI ."},
                     { role: "user", content: prompt }],
             max_tokens: 100
         }, {
